@@ -18,8 +18,6 @@ function randomCircleElements(num){
       color: 'rgba('+random(255)+','+random(255)+','+random(255)+','+Math.random()+')'
     });
   }
-
-  draw();
 }
 
 function randomSign(){
@@ -68,5 +66,10 @@ function draw(){
 
 
 $(document).ready(function(){
+  $(document).click(function(){
+    circles = [];
+    randomCircleElements(random(50,10));
+  })
   randomCircleElements(random(50,10));
+  draw();
 });
