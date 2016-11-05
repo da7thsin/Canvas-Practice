@@ -5,7 +5,7 @@ canvas.height = window.innerHeight;
 var width = canvas.width;
 var height = canvas.height;
 var circles = [];
-var colors = ['#178359','#4DD29E','#E05206','#B213B6','#37D1DD'];
+var colors = ['#178359','#4DD29E','#37D1DD','#33E8EF','#2B1975','#F3C912'];
 
 function randomCircleElements(num){
   for(var i = 0; i < num; i++){
@@ -14,8 +14,8 @@ function randomCircleElements(num){
       y: random(height),
       speedX: random(7,2) * randomSign(),
       speedY: random(7,2) * randomSign(),
-      size: random(30,3),
-      color: 'rgba('+random(255)+','+random(255)+','+random(255)+','+Math.random()+')'
+      size: random(30,5),
+      color: colors[random(colors.length)]
     });
   }
 }
@@ -37,23 +37,24 @@ function draw(){
 
     if(circle.x > width){
       circle.speedX = -random(7,1);
-      circle.color = 'rgba('+random(255)+','+random(255)+','+random(255)+','+Math.random()+')'
+      circle.color = colors[random(colors.length)];
     }
 
     if(circle.y > height){
       circle.speedY = -random(7,1);
-      circle.color = 'rgba('+random(255)+','+random(255)+','+random(255)+','+Math.random()+')'
+      circle.color = colors[random(colors.length)];
     }
 
     if(circle.x < 0){
       circle.speedX = random(7,1);
-      circle.color = 'rgba('+random(255)+','+random(255)+','+random(255)+','+Math.random()+')'
+      circle.color = colors[random(colors.length)];
     }
 
     if(circle.y < 0){
       circle.speedY = random(7,1);
-      circle.color = 'rgba('+random(255)+','+random(255)+','+random(255)+','+Math.random()+')'
+      circle.color = colors[random(colors.length)];
     }
+
 
     ctx.fillStyle = circle.color;
     ctx.beginPath();
@@ -68,8 +69,8 @@ function draw(){
 $(document).ready(function(){
   $(document).click(function(){
     circles = [];
-    randomCircleElements(random(50,10));
+    randomCircleElements(random(100,25));
   })
-  randomCircleElements(random(50,10));
+  randomCircleElements(random(100,25));
   draw();
 });
