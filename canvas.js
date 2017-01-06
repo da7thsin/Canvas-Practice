@@ -35,9 +35,8 @@ var canvas = (function(){
 // FRACTAL TREE
 // canvas.draw(function(ctx){
 //   var angle = Math.PI/4;
-//   ctx.fillStyle = "#FFa500";
-//   ctx.strokeStyle = "#00F";
-//
+//   ctx.fillStyle = "tomato";
+// 
 //   function tree(len){
 //     ctx.beginPath();
 //     ctx.moveTo(0, 0);
