@@ -36,7 +36,7 @@ var canvas = (function(){
 // canvas.draw(function(ctx){
 //   var angle = Math.PI/4;
 //   ctx.fillStyle = "tomato";
-// 
+//
 //   function tree(len){
 //     ctx.beginPath();
 //     ctx.moveTo(0, 0);
